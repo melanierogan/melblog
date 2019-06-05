@@ -13,8 +13,7 @@ class Blogger
   def self.all
     connection = PG.connect(dbname: 'blogger')
     result = connection.exec( "SELECT * FROM blogger;" )
-    result.map { |blogger| Blogger.new(blogger['id'], blogger['name'], blogger['message'],  blogger['date']) }
-    p result
+    result.map { |blogger| (blogger['id'], blogger['name'], blogger['message'],  blogger['date']) }
   end
 
   def to_s
