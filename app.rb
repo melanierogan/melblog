@@ -1,13 +1,14 @@
 require 'sinatra/base'
+require './lib/blog'
 
-class Blogger < Sinatra::Base
+class BloggerTime < Sinatra::Base
   get '/' do
     erb(:index)
   end
 
   get '/blog' do
-    @bookmarks_list = Bookmark.all
-    erb(:bookmarks)
+    @blogger_list = Blogger.all
+    erb(:blog)
   end
 
 end

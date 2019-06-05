@@ -1,24 +1,23 @@
 require 'pg'
 
 class Blogger
-  attr_reader :id, :url
+  attr_reader :id, :name, :message, :date
 
-  def initialize(id, url)
+  def initialize(id, name, message, date)
     @id = id
-    @url = url
+    @name = name
+    @message = message
+    @date = date
   end
 
   def self.all
-    if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'blogger_test')
-    else
-      connection = PG.connect(dbname: 'blogger')
-    end
-    result = connection.exec( "SELECT * FROM bookmarks" )
-    result.map { |bookmark| Blogger.new(bookmark['id'], bookmark['url']) }
+    connection = PG.connect(dbname: 'blogger')
+    result = connection.exec( "SELECT * FROM blogger;" )
+    result.map { |blogger| Blogger.new(blogger['id'], blogger['name'], blogger['message'],  blogger['date']) }
+    p result
   end
 
   def to_s
-    "#{@id} #{@url}"
+    "#{@id} #{@name} #{@message} #{@date}"
   end
 end
