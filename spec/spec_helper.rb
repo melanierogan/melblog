@@ -19,7 +19,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 
-Capybara.app = Blogger
+Capybara.app = BloggerTime
 
 
 RSpec.configure do |config|
