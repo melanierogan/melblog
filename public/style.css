@@ -3,7 +3,6 @@ body {
   font-display: white !important; 
 }
 
-card {
-  text-align: left;
-  position: left;
+no-color {
+  color: black !important;
 }

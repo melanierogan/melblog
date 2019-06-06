@@ -10,18 +10,18 @@
   <body>
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Melblog 🐙</h1>
+    <h1 class="display-4"><a href="/" style="color: black">Melblog 🐙</a></h1>
     <p class="lead">Welcome to the best blog evar</p>
   </div>
 </div>
-<div class="container" style="padding: 20px 20px;" align="center">
+<div class="container-fluid" style="padding: 20px 20px;" align="center">
    <% @blogger_list.each do |row| %>
   
   <div class="container-fluid" style="padding: 20px 20px;">
     <div class="card" style="width: 38rem;" align="left">
       <div class="card-body">
-        <h5 class="card-title">Blog entry</h5>
-        <h6 class="card-subtitle mb-2 text-muted">by <%= row.name %></h6>
+        <h5 class="card-title"><%= row.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted">created on <%= row.created_on %></h6>
         <p class="card-text"><%= row.message %></p>
         <a href="#" class="card-link">more...</a>
       </div>
