@@ -15,7 +15,8 @@ Behaviour
 
 Main page where all the posts are listed
 
-<img width="500" alt="Submit post" src="https://user-images.githubusercontent.com/16557524/59036872-08600e80-8868-11e9-8bd0-0e0992c5952c.png">
+<img width="500" alt="Blog page" src="https://user-images.githubusercontent.com/16557524/59036869-08600e80-8868-11e9-8589-866a0b1b263f.png">
+
 
 Getting to the submit page
 
@@ -24,4 +25,4 @@ Getting to the submit page
 
 Filling out the post form
 
-<img width="500" alt="Blog page" src="https://user-images.githubusercontent.com/16557524/59036869-08600e80-8868-11e9-8589-866a0b1b263f.png">
+<img width="500" alt="Submit post" src="https://user-images.githubusercontent.com/16557524/59036872-08600e80-8868-11e9-8bd0-0e0992c5952c.png">
