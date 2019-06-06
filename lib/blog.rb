@@ -16,6 +16,11 @@ class Blogger
     result.map { |blogger| Blogger.new(blogger['id'], blogger['name'], blogger['message'],  blogger['created_on']) }
   end
 
+  def self.create(name:, message:)
+    connection = PG.connect(dbname: 'blogger')
+    connection.exec("INSERT INTO blogger (name, message) VALUES('#{name}', '#{message}')")
+  end
+
   def to_s
     "#{@id} #{@name} #{@message} #{@created_on}"
   end

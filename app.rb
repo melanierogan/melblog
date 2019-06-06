@@ -16,7 +16,8 @@ class BloggerTime < Sinatra::Base
   end
 
   post '/submit' do
-    "Value: '#{params[:somevalue]}'"
+    Blogger.create(name: params[:name], message: params[:message])
+    redirect '/'
   end
 
 end
