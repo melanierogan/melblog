@@ -6,3 +6,7 @@ gem 'shotgun'
 gem 'capybara', group: :test
 gem 'selenium-webdriver'
 gem 'pg'
+
+group :production do
+  gem "puma"
+end
