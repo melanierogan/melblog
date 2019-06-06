@@ -2,13 +2,21 @@ require 'sinatra/base'
 require './lib/blog'
 
 class BloggerTime < Sinatra::Base
-  get '/' do
+  get '/i' do
     erb(:index)
   end
 
-  get '/blog' do
+  get '/' do
     @blogger_list = Blogger.all
     erb(:blog)
+  end
+
+  get '/submit' do
+    erb(:submitblog)
+  end
+
+  post '/submit' do
+    "Value: '#{params[:somevalue]}'"
   end
 
 end
