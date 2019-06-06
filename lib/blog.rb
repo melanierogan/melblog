@@ -18,7 +18,7 @@ class Blogger
 
   def self.create(name:, message:, created_on:)
     connection = PG.connect(dbname: 'blogger')
-    connection.exec("INSERT INTO blogger (name, message, created_on) VALUES('#{name}', '#{message}', '#{created_on}')")
+    connection.exec("INSERT INTO blogger (name, message, created_on) VALUES('name', 'message', 'created_on')")
   end
 
   def to_s
